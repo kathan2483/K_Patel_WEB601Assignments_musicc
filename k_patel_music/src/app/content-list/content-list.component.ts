@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { TypeFilterPipe } from '../type-filter.pipe';
 import { ContentCardComponent } from '../content-card/content-card.component';
 import { FormsModule } from '@angular/forms';
+import { HoverAffectDirective } from '../hover-affect.directive';
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule, ContentCardComponent, TypeFilterPipe, FormsModule],
+  imports: [CommonModule, ContentCardComponent, TypeFilterPipe, FormsModule, HoverAffectDirective],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })
@@ -46,7 +47,7 @@ export class ContentListComponent implements OnInit {
       title: "Shape of You",
       description: "A popular pop song by Ed Sheeran with catchy melodies and lyrics.",
       creator: "Ed Sheeran",
-      imgURL: "https://artwork.anghcdn.co/webp/?id=887092&size=640",
+      imgURL: "",
       type: "Pop",
       tags: ["rock", "pop"]
       },
